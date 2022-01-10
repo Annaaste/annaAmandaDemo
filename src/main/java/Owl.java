@@ -1,19 +1,15 @@
+import java.util.Arrays;
+
 public class Owl {
-    private int wingSpan;
+    private int wingspan;
     private boolean hungry;
     private int age;
-    private int height;
+    private Squirrel[] squirrels;
 
-    Owl(int wingSpan, boolean hungry, int age, int height){
-        this.wingSpan = wingSpan;
+    public Owl(int wingspan, boolean hungry, int age, Squirrel[]squirrels){
+        this.wingspan = wingspan;
         this.hungry = hungry;
         this.age = age;
-        this.height = height;
-    }
-    public boolean eat(boolean hungry, int squirrels){
-        if (hungry = true && squirrels > 0){
-
-        }
-    return false;
+        this.squirrels = Arrays.copyOf(squirrels, squirrels.length);
     }
 }
