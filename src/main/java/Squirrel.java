@@ -55,8 +55,8 @@ public class Squirrel {
         }
     }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 4ff3f56e050b2a43607fc1205e75654120c767ab
+
+
+
