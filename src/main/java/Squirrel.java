@@ -1,80 +1,58 @@
 public class Squirrel {
-    public boolean isDead;
-    public String name;
-    private int numOfConesInNest;
-    private int numOfEaten;
-    private Tree tree;
+        private int weight;
+        private int numOfConesInNest;
+        private int age;
+        private int height;
 
-    Squirrel(boolean isDead, String name, int numOfConesInNest, int numOfEaten, Tree tree){
-        this.isDead = isDead;
-        this.name = name;
-        this.numOfConesInNest = numOfConesInNest;
-        this.numOfEaten = numOfEaten;
-        this.tree = tree;
-    }
-
-    public void setIsDead(boolean isDead) {
-        this.isDead = isDead;
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setNumOfConesInNest(int numOfConesInNest) {
-        this.numOfConesInNest = numOfConesInNest;
-    }
-
-    public void setNumOfEaten(int numOfEaten) {
-        this.numOfEaten = numOfEaten;
-    }
-
-    public void setTree(Tree tree) {
-        this.tree = tree;
-    }
-
-    public boolean getIsDead() {
-        return isDead;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getNumOfConesInNest() {
-        return numOfConesInNest;
-    }
-
-    public int getNumOfEaten() {
-        return numOfEaten;
-    }
-
-    public Tree getTree() {
-        return tree;
-    }
-
-    public String toString() {
-        String something = (this.name + " har " + this.numOfConesInNest +" kottar kvar och har ätit " + this.numOfEaten);
-        return something;
-
-    }
-
-    public void eat() {
-        if (numOfConesInNest > 0)
-        {
-            numOfConesInNest--;
-            numOfEaten++;
-            return;
+        Squirrel( int weight, int numOfConesInNest, int age, int height){
+            this.weight = weight;
+            this.numOfConesInNest = numOfConesInNest;
+            this.age = age;
+            this.height = height;
         }
 
-        isDead = true;
-        Tree.aliveSquirrels--;
-        Tree.starvedSquirrels++;
-        System.out.println("Ekorre " + this.name + " svalt ihjäl. Antal kvar i trädet:" + Tree.aliveSquirrels);
+        public void setWeight ( int weight){
+            this.weight = weight;
 
-    }
+        }
 
-    }
+        public void setNumOfConesInNest ( int numOfConesInNest){
+            this.numOfConesInNest = numOfConesInNest;
+        }
+
+        public void setAge ( int age){
+            this.age = age;
+        }
+
+        public void setHeight ( int height){
+            this.height = height;
+        }
+
+        public int getWeight () {
+            return weight;
+        }
+
+
+        public int getNumOfConesInNest () {
+            return numOfConesInNest;
+        }
+
+        public int getAge () {
+            return age;
+        }
+
+        public int getHeight () {
+            return height;
+        }
+
+        public void eat () {
+            boolean isHungry = Math.random() < 0.5;
+            if (numOfConesInNest > 0 && isHungry ) {
+                System.out.println("Ekorren äter");
+                numOfConesInNest--;
+            } else {
+                System.out.println("Ekorren äter inte! ");
+            }
+        }
 
 }
