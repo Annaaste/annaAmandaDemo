@@ -51,13 +51,7 @@ public class PineTree {
     }
 
     public boolean fall(int wind, int age, boolean lumberjack) {
-        if (lumberjack) {
-            return true;
-        }
-        if (wind + age > 5) {
-            return true;
-        }
-        return false;
+        return lumberjack || (wind + age) > 5;
     }
 
 }
