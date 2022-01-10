@@ -16,6 +16,10 @@ public class Main {
         PineTree pineTree = new PineTree(nrOfCones, 5 ,3, squirrels, owl);
 
         System.out.println("äter ugglan? " + owl.eat(nrOfSquirrels ));
-
+        System.out.println("äter ekorren? " + squirrels.eat());
+        Squirrel ekorre;
+        for(squirrels : ekorre) { //iterate the pets list
+            ekorre.eat();//call eat() on each pet object
+        }
     }
 }

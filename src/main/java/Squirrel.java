@@ -53,6 +53,11 @@ public class Squirrel {
             System.out.println("Ekorren äter inte! ");
         }
     }
+    public void eatAll() { //method to invoke eat() on list of pets
+        for( pet : this.pets) { //iterate the pets list
+            pet.eat();//call eat() on each pet object
+        }
+    }
 }
 
 

@@ -1,11 +1,7 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Owl {
     private int wingspan;
     private boolean hungry;
     private int age;
-    //private int nrOfSquirrels;
 
     public Owl(int wingspan, boolean hungry, int age){
         this.wingspan = wingspan;
