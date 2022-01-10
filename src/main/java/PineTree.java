@@ -1,17 +1,18 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PineTree {
     private int nrOfCones;
     private int age;
     private int height;
-    private Squirrel[] squirrels;
+    private ArrayList<Squirrel>squirrels;
     private Owl owl;
 
-    PineTree(int nrOfCones, int age, int height, Squirrel[] squirrels, Owl owl) {
+    PineTree(int nrOfCones, int age, int height, ArrayList<Squirrel>squirrels, Owl owl) {
         this.nrOfCones = nrOfCones;
         this.age = age;
         this.height = height;
-        this.squirrels = Arrays.copyOf(squirrels, squirrels.length);
+        this.squirrels = new ArrayList<Squirrel>();
     }
 
     public int getAge() {
@@ -26,10 +27,9 @@ public class PineTree {
         return nrOfCones;
     }
 
-    public Squirrel[] getSquirrels() {
-        return Arrays.copyOf(squirrels, squirrels.length);
+    public ArrayList<Squirrel> getSquirrels() {
+        return squirrels;
     }
-
 
     public void setAge(int age) {
         this.age = age;
@@ -43,14 +43,13 @@ public class PineTree {
         this.nrOfCones = nrOfCones;
     }
 
-    public Squirrel[] setSquirrels(Squirrel[] squirrels) {
-        return Arrays.copyOf(squirrels, squirrels.length);
+    public void setSquirrels(ArrayList<Squirrel> squirrels) {
+        this.squirrels = squirrels;
     }
 
     public void setOwl(Owl owl) {
         this.owl = owl;
     }
-
 
     public boolean fall(int wind, int age, boolean lumberjack) {
         if (lumberjack) {

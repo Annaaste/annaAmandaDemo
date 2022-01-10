@@ -13,7 +13,6 @@ public class Squirrel {
 
     public void setWeight ( int weight){
         this.weight = weight;
-
     }
 
     public void setNumOfConesInNest ( int numOfConesInNest){

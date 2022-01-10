@@ -1,15 +1,22 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Owl {
     private int wingspan;
     private boolean hungry;
     private int age;
-    private Squirrel[] squirrels;
+    //private int nrOfSquirrels;
 
-    public Owl(int wingspan, boolean hungry, int age, Squirrel[]squirrels){
+    public Owl(int wingspan, boolean hungry, int age){
         this.wingspan = wingspan;
         this.hungry = hungry;
         this.age = age;
-        this.squirrels = Arrays.copyOf(squirrels, squirrels.length);
+    }
+    public boolean eat (int nrOfSquirrels) {
+        boolean isHungry = Math.random() < 0.5;
+        if (nrOfSquirrels > 0 && isHungry ) {
+            return true;
+        }
+        return false;
     }
 }
