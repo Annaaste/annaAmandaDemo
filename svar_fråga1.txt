@@ -1,0 +1,1 @@
+ i en aggregation så är dom beroende av varandra och i en composition så är dom inte det 
