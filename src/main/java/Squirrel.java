@@ -2,13 +2,13 @@ public class Squirrel {
     private int weight;
     private int numOfConesInNest;
     private int age;
-    private int height;
+    private boolean isHungry;
 
-    Squirrel(int weight, int numOfConesInNest, int age, int height) {
+    Squirrel(int weight, int numOfConesInNest, int age, boolean isHungry) {
         this.weight = weight;
         this.numOfConesInNest = numOfConesInNest;
         this.age = age;
-        this.height = height;
+        this.isHungry = isHungry;
     }
 
     public void setWeight(int weight) {
@@ -23,8 +23,8 @@ public class Squirrel {
         this.age = age;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setHeight(boolean isHungry) {
+        this.isHungry = isHungry;
     }
 
     public int getWeight() {
@@ -40,23 +40,17 @@ public class Squirrel {
         return age;
     }
 
-    public int getHeight() {
-        return height;
+    public boolean getIsHungry() {
+        return isHungry;
     }
 
-    public void eat() {
-        boolean isHungry = Math.random() < 0.5;
+    public boolean eat() {
         if (numOfConesInNest > 0 && isHungry) {
-            System.out.println("Ekorren äter");
             numOfConesInNest--;
-        } else {
-            System.out.println("Ekorren äter inte! ");
+            System.out.println("Ekorren äter en kotte och har " + numOfConesInNest + " kvar");
+            return true;
         }
-    }
-    public void eatAll() { //method to invoke eat() on list of pets
-        for( pet : this.pets) { //iterate the pets list
-            pet.eat();//call eat() on each pet object
-        }
+        return false;
     }
 }
 
