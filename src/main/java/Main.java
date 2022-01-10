@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        hej
         Random random = new Random();
         int maxNrOfCones = 100;
         int maxNrOfSquirrels = 20;
