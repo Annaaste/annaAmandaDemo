@@ -1,4 +1,4 @@
-public class Squirrel {
+public class Squirrel extends Animal {
     private int weight;
     private int numOfConesInNest;
     private int age;

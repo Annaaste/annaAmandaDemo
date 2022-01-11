@@ -1,4 +1,4 @@
-public class Owl {
+public class Owl extends Animal{
     private int wingspan;
     private boolean isHungry;
     private int age;
