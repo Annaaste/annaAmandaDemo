@@ -30,10 +30,13 @@ public class Main {
                     "hungrig uggla? " + hungryOwl + ".\n" +
                     "hungrig ekorre? " + hungrySquirrel);
 
-            System.out.println("äter ugglan? " + owl.eat(nrOfSquirrels));
-            System.out.println("äter ekorren? " + squirrel.eat());
+            System.out.println("äter ugglan? " + owl.eat(nrOfSquirrels, hungryOwl));
+            System.out.println("äter ekorren? " + squirrel.eat(nrOfConesInNest, hungrySquirrel));
+            System.out.println(owl.eat(squirrel, hungryOwl));
+            System.out.println(squirrel.eat(nrOfConesInNest, hungrySquirrel));
         }
 
-
+//5. Använd @Override i Squirrell och Owl för att implementera metoden
+//Animal.eat(Object food)
     }
 }

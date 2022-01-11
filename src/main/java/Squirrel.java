@@ -44,13 +44,10 @@ public class Squirrel extends Animal {
         return isHungry;
     }
 
-    public boolean eat() {
-        if (numOfConesInNest > 0 && isHungry) {
-            numOfConesInNest--;
-            System.out.println("Ekorren äter en kotte och har " + numOfConesInNest + " kvar");
-            return true;
-        }
-        return false;
+    @Override
+    public boolean eat(Object food, boolean isHungry) {
+        Integer cones = (Integer) food;
+        return food != null && isHungry && cones > 0;
     }
 }
 
