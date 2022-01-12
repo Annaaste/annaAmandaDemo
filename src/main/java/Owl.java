@@ -1,13 +1,23 @@
 public class Owl extends Animal{
     private int wingspan;
-    //private boolean isHungry;
-    private int age;
+    public static final int DEFAULT_WINGSPAN = 90;
 
-    public Owl(int wingspan, boolean hungry, int age){
+    public Owl(int wingspan){
         this.wingspan = wingspan;
-        //this.isHungry = hungry;
-        this.age = age;
     }
+
+    public void setWingspan(int wingspan) {
+        if(wingspan >= 75 && wingspan <=110){
+            this.wingspan = wingspan;  
+        } else {
+            this.wingspan = DEFAULT_WINGSPAN;
+        }
+    }
+
+    public int getWingspan() {
+        return wingspan;
+    }
+
     @Override
     public boolean eat(Object food, boolean isHungry) {
         return food instanceof Squirrel && isHungry;

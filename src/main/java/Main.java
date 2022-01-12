@@ -15,7 +15,7 @@ public class Main {
         ArrayList<Squirrel> squirrels = new ArrayList<Squirrel>();
         Squirrel squirrel = new Squirrel(1, nrOfConesInNest, 1, hungrySquirrel);
 
-        Owl owl = new Owl(3, hungryOwl, 1);
+        Owl owl = new Owl(3);
         PineTree pineTree = new PineTree(nrOfCones, age, 3, squirrels, owl);
 
         System.out.println("vind av 3: " + wind + ".\n" +
@@ -36,7 +36,6 @@ public class Main {
             System.out.println(squirrel.eat(nrOfConesInNest, hungrySquirrel));
         }
 
-//5. Använd @Override i Squirrell och Owl för att implementera metoden
-//Animal.eat(Object food)
+
     }
 }
