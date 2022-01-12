@@ -48,7 +48,7 @@
 
     <modules>
         <module>annaAmandaDemo-domain</module>
-        <module>annaAmandaDemo-service</module>
+        <module>annaAmandaDemo-service-impl</module>
     </modules>
 
     <build>

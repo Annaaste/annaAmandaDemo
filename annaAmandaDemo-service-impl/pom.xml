@@ -10,9 +10,20 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>annaAmandaDemo-service</artifactId>
+    <artifactId>annaAmandaDemo-service-impl</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>se.sti</groupId>
+            <artifactId>annaAmandaDemo</artifactId>
+        </dependency>
 
-
+        <dependency>
+            <groupId>se.sti</groupId>
+            <artifactId>annaAmandaDemo-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
