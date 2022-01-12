@@ -1,3 +1,5 @@
+package annaAmandaDemo.domain;
+
 public class Owl extends Animal{
     private int wingspan;
     public static final int DEFAULT_WINGSPAN = 90;

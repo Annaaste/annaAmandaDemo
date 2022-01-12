@@ -1,3 +1,5 @@
+package annaAmandaDemo.domain;
+
 public class Squirrel extends Animal {
     private int weight;
     private int numOfConesInNest;

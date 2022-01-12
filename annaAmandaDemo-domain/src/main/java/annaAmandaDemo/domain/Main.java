@@ -1,3 +1,5 @@
+package annaAmandaDemo.domain;
+
 import java.util.ArrayList;
 import java.util.Random;
 

@@ -1,3 +1,5 @@
+package annaAmandaDemo.domain;
+
 public abstract class Animal {
     public int weight;
     public boolean hungry;
