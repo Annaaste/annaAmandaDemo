@@ -11,13 +11,16 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>se.sti</groupId>
-                <artifactId>annaAmandaDemo</artifactId>
+                <artifactId>annaAmandaDemo-service-impl</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
-
+            <dependency>
+                <groupId>se.sti</groupId>
+                <artifactId>annaAmandaDemo.domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
