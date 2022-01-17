@@ -7,11 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="annaAmandaDemo-service-impl" />
+        <module name="annaAmandaDemo-service" />
         <module name="annaAmandaDemo-domain" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="annaAmandaDemo-service" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

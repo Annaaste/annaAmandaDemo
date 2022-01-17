@@ -13,14 +13,16 @@
         <dependencies>
             <dependency>
                 <groupId>se.sti</groupId>
-                <artifactId>annaAmandaDemo-service-impl</artifactId>
+                <artifactId>annaAmandaDemo.domain</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>se.sti</groupId>
-                <artifactId>annaAmandaDemo.domain</artifactId>
+                <artifactId>annaAmandaDemo.service</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -52,6 +54,8 @@
     <modules>
         <module>annaAmandaDemo-domain</module>
         <module>annaAmandaDemo-service-impl</module>
+        <module>annaAmandaDemo-service</module>
+
     </modules>
 
     <build>
