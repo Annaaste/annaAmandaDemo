@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -27,117 +28,115 @@
         <junit.version>4.13.1</junit.version>
     </properties>
 
+    <modules>
+        <module>annaAmandaDemo-domain</module>
+        <module>annaAmandaDemo-service-impl</module>
+        <module>annaAmandaDemo-service</module>
+        <module>annaAmandaDemo-test</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- project -->
+            <dependency>
+                <groupId>se.sti</groupId>
+                <artifactId>annaAmandaDemo-domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>se.sti</groupId>
+                <artifactId>annaAmandaDemo-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
 
-<modules>
-<module>annaAmandaDemo-domain</module>
-<module>annaAmandaDemo-service-impl</module>
-<module>annaAmandaDemo-service</module>
-<module>annaAmandaDemo-test</module>
-</modules>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-<dependencyManagement>
-<dependencies>
+        </dependencies>
+    </dependencyManagement>
 
-    <!-- project -->
-    <dependency>
-        <groupId>se.sti</groupId>
-        <artifactId>annaAmandaDemo-domain</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-        <groupId>se.sti</groupId>
-        <artifactId>annaAmandaDemo-service</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </dependency>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources-filtered</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 
-
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>${junit.version}</version>
-        <scope>test</scope>
-    </dependency>
-
-</dependencies>
-</dependencyManagement>
-
-<build>
-<resources>
-    <resource>
-        <directory>src/main/resources</directory>
-    </resource>
-    <resource>
-        <directory>src/main/resources-filtered</directory>
-        <filtering>true</filtering>
-    </resource>
-</resources>
-
-<pluginManagement>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-clean-plugin</artifactId>
-            <version>${maven.clean.plugin.version}</version>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>${maven.compiler.plugin.version}</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>${maven.dependency.plugin.version}</version>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>${maven.jar.plugin.version}</version>
-            <configuration>
-                <outputDirectory>/out</outputDirectory>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-plugin-plugin</artifactId>
-            <version>${maven.plugin.plugin.version}</version>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <version>${maven.resources.plugin.version}</version>
-        </plugin>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>flatten-maven-plugin</artifactId>
-            <version>${maven.flatten.plugin.version}</version>
-            <configuration>
-                <updatePomFile>true</updatePomFile>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>flatten</id>
-                    <phase>process-resources</phase>
-                    <goals>
-                        <goal>flatten</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>flatten.clean</id>
-                    <phase>clean</phase>
-                    <goals>
-                        <goal>clean</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</pluginManagement>
-</build>
-        </project>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven.clean.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven.dependency.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven.jar.plugin.version}</version>
+                    <configuration>
+                        <outputDirectory>/out</outputDirectory>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>${maven.plugin.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${maven.flatten.plugin.version}</version>
+                    <configuration>
+                        <updatePomFile>true</updatePomFile>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>flatten</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>flatten</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>flatten.clean</id>
+                            <phase>clean</phase>
+                            <goals>
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

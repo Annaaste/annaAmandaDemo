@@ -7,7 +7,6 @@ public class PineTree {
     private int age;
     private int height;
     private ArrayList<Squirrel>squirrels;
-    private Owl owl;
 
     PineTree(int nrOfCones, int age, int height, ArrayList<Squirrel>squirrels, Owl owl) {
         this.nrOfCones = nrOfCones;
@@ -49,7 +48,6 @@ public class PineTree {
     }
 
     public void setOwl(Owl owl) {
-        this.owl = owl;
     }
 
     public boolean fall(int wind, int age, boolean lumberjack) {
