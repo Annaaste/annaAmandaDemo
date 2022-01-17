@@ -5,6 +5,7 @@ public class Squirrel extends Animal {
     private int numOfConesInNest;
     private int age;
     private boolean isHungry;
+    private String name;
 
     Squirrel(int weight, int numOfConesInNest, int age, boolean isHungry) {
         this.weight = weight;
@@ -12,9 +13,17 @@ public class Squirrel extends Animal {
         this.age = age;
         this.isHungry = isHungry;
     }
+    public Squirrel(int age, String name){
+        this.age = age;
+        this.name = name;
+    }
+    public Squirrel(){}
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
     public void setNumOfConesInNest(int numOfConesInNest) {
         this.numOfConesInNest = numOfConesInNest;
@@ -29,6 +38,9 @@ public class Squirrel extends Animal {
     public int getWeight() {
         return weight;
     }
+    public String getName() {
+        return name;
+    }
     public int getNumOfConesInNest() {
         return numOfConesInNest;
     }
@@ -38,6 +50,7 @@ public class Squirrel extends Animal {
     public boolean getIsHungry() {
         return isHungry;
     }
+
 
     @Override
     public boolean eat(Object food, boolean isHungry) {

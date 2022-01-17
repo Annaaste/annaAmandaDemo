@@ -6,12 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="annaAmandaDemo-service-impl" />
         <module name="annaAmandaDemo-domain" />
+        <module name="annaAmandaDemo-test-unit" />
+        <module name="annaAmandaDemo-service-impl" />
+        <module name="annaAmandaDemo-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="annaAmandaDemo-service" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

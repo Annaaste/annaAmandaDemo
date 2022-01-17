@@ -13,11 +13,14 @@
     <artifactId>annaAmandaDemo-service-impl</artifactId>
     <packaging>jar</packaging>
 
-   <dependencies>
-       <dependency>
-           <groupId>se.sti</groupId>
-           <artifactId>annaAmandaDemo-domain</artifactId>
-           <version>1.0-SNAPSHOT</version>
-       </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>se.sti</groupId>
+            <artifactId>annaAmandaDemo-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>se.sti</groupId>
+            <artifactId>annaAmandaDemo-service</artifactId>
+        </dependency>
    </dependencies>
 </project>
